@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Hidden Man](https://up.htmlacademy.ru/nodejs-api/6/user/363977).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Осипук](https://htmlacademy.ru/profile/id616431).
 
 ---
 
