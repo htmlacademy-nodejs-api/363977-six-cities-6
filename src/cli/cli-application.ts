@@ -1,4 +1,5 @@
 import { Command } from './commands/command.interface.js';
+import {CommandParser} from './command-parser.js';
 
 type CommandCollection = Record<string, Command>;
 
@@ -30,6 +31,10 @@ export class CLIApplication {
   }
 
   public processCommand(argv: string[]): void {
-    console.log(argv);
+    const parsedCommand = CommandParser.parse(argv);
+    const [commandName] = Object.keys(parsedCommand);
+    const command = this.getCommand(commandName);
+    const commandArguments = parsedCommand[commandName] ?? [];
+    command.execute(...commandArguments);
   }
 }
